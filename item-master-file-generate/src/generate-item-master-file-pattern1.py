@@ -12,8 +12,8 @@ if __name__ == '__main__':
     end_date_past = today - timedelta(days=20)
     end_date_future = today + timedelta(days=300)
 
-    today_file_str = (today - timedelta(days=1)).strftime("%Y%m%d")
-    yesterday_file_str = (today - timedelta(days=2)).strftime("%Y%m%d")
+    yesterday_file_str = (today - timedelta(days=1)).strftime("%Y%m%d")
+    two_days_before_file_str = (today - timedelta(days=2)).strftime("%Y%m%d")
 
     start_date_past_str = start_date_past.strftime("%Y%m%d")
     start_date_future_str = start_date_future.strftime("%Y%m%d")
@@ -23,10 +23,10 @@ if __name__ == '__main__':
     N = "000000013"
     N_1 = '000000014'
 
-    path_1 = 'item-master-file-generate/pattern1_yesterday.bin'
-    path = 'item-master-file-generate/pattern1_today.bin'
-    header_1 = "H" + yesterday_file_str.ljust(134, " ")
-    header = "H" + today_file_str.ljust(134, " ")
+    path_1 = 'item-master-file-generate/pattern1_2_days_before.bin'
+    path = 'item-master-file-generate/pattern1_yesterday.bin'
+    header_1 = "H" + two_days_before_file_str.ljust(134, " ")
+    header = "H" + yesterday_file_str.ljust(134, " ")
     tailer_1 = "E" + N_1.ljust(134, " ")
     tailer = "E" + N.ljust(134, " ")
 
